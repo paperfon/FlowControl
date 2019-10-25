@@ -15,11 +15,12 @@ namespace FlowControl
             // Looping 10 times and adding to the variable
             for (int i = 0; i < 10; i++)
             {
-                repeatedText += selection;
+                //                repeatedText += selection;
+                Console.Write($"{i + 1}, {selection},");
             }
 
             // Output
-            Console.WriteLine(repeatedText);
+          //  Console.WriteLine(repeatedText);
 
         }
     }

@@ -5,7 +5,7 @@ namespace FlowControl
 {
     internal class ThirdWordChooser
     {
-        public ThirdWordChooser()
+        public static void SplitAndPrint()
         {
             // Saving the input in an array and splitting it
             string[] sentence = Util.AskForSelection("Input your sentence: ").Split(null);
@@ -15,7 +15,7 @@ namespace FlowControl
 
             // Removing the blank spaces and adding words to the list
             foreach (var word in sentence)
-            { 
+            {
                 if (!string.IsNullOrEmpty(word))
                 {
                     tempList.Add(word);
@@ -26,7 +26,6 @@ namespace FlowControl
 
             // Final output of the third word
             Console.WriteLine("The third word is: " + words[2]);
-
         }
     }
 }

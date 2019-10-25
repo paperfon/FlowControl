@@ -43,7 +43,7 @@ namespace FlowControl
                         break;
                     case "4":
                         Console.WriteLine();
-                        ThirdWordChooser thirdWordChooser = new ThirdWordChooser();
+                        ThirdWordChooser.SplitAndPrint();
                         break;
                     default:
                         Console.WriteLine("This is not a valid selection. Please try again!");
