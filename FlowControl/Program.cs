@@ -6,7 +6,53 @@ namespace FlowControl
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            do
+            {
+                // Starting the menu
+                Console.WriteLine();
+                Console.WriteLine("***************************************************************");
+                Console.WriteLine("Welcome to the main menu. Please navigate by choosing a number!");
+                Console.WriteLine("1. Check the price of a ticket for 1 person");
+                Console.WriteLine("2. Check the price of tickets for a group");
+                Console.WriteLine("3. Make your text repeat itself 10 times");
+                Console.WriteLine("4. Write a sentence and the system will print out your third word");
+                Console.WriteLine("0. Close the program");
+                Console.WriteLine("***************************************************************");
+                
+                // Asking for input
+                string selection = Util.AskForSelection("Your selection: ");
+
+                // Terminating the program if 0 is chosen
+                if (selection == "0") break;
+
+                // Switch calling different classes according to the input
+                switch (selection)
+                {
+                    case "1":
+                        Console.WriteLine();
+                        CinemaTickets cinemaTickets = new CinemaTickets();
+                        break;
+                    case "2":
+                        Console.WriteLine();
+                        CinemaTicketsGroup cinemaTicketsGroup = new CinemaTicketsGroup();
+                        break;
+                    case "3":
+                        Console.WriteLine();
+                        StringRepeater stringRepeater = new StringRepeater();
+                        break;
+                    case "4":
+                        Console.WriteLine();
+                        ThirdWordChooser thirdWordChooser = new ThirdWordChooser();
+                        break;
+                    default:
+                        Console.WriteLine("This is not a valid selection. Please try again!");
+                        Console.WriteLine("------------------------------------------------");
+                        break;
+                }
+
+            }
+            while (true);
         }
     }
 }
