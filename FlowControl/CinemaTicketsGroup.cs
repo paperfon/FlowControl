@@ -5,7 +5,7 @@ namespace FlowControl
     internal class CinemaTicketsGroup
     {
 
-        public CinemaTicketsGroup()
+        public static void ShowPrice()
         {
             // Why it complains for total price but not for ticketPrice??
             // Defining variables to be used

@@ -4,7 +4,7 @@ namespace FlowControl
 {
     internal class CinemaTickets
     {
-        public CinemaTickets()
+        public static void ShowPrice()
         {
             // Getting the input and calling the calculate age method
             uint input = Util.AskForInt("Input the age of the person:");

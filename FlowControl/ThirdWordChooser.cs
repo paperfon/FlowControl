@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FlowControl
 {
@@ -7,22 +8,38 @@ namespace FlowControl
     {
         public static void SplitAndPrint()
         {
-            // Saving the input in an array and splitting it
-            string[] sentence = Util.AskForSelection("Input your sentence: ").Split(null);
+            bool doWhile = true;
+            string[] words;
 
-            // Creating a new temporary list to store words only
-            var tempList = new List<string>();
-
-            // Removing the blank spaces and adding words to the list
-            foreach (var word in sentence)
+            do
             {
-                if (!string.IsNullOrEmpty(word))
+                // Saving the input in an array and splitting it
+                string[] sentence = Util.AskForSelection("Input your sentence: ").Split(null);
+
+                // Creating a new temporary list to store words only
+                var tempList = new List<string>();
+
+                // Removing the blank spaces and adding words to the list
+                foreach (var word in sentence)
                 {
-                    tempList.Add(word);
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        tempList.Add(word);
+                    }
                 }
-            }
-            // Turning the list back to an array
-            var words = tempList.ToArray();
+                // Turning the list back to an array
+                words = tempList.ToArray();
+
+                // Make sure the sentence has at least three words
+                if (words.Count() < 3)
+                {
+                    Console.WriteLine("The sentence needs to have at least three words!");
+                } else
+                {
+                    doWhile = false;
+                }
+
+            } while (doWhile);
 
             // Final output of the third word
             Console.WriteLine("The third word is: " + words[2]);

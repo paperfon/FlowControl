@@ -31,15 +31,15 @@ namespace FlowControl
                 {
                     case "1":
                         Console.WriteLine();
-                        CinemaTickets cinemaTickets = new CinemaTickets();
+                        CinemaTickets.ShowPrice();
                         break;
                     case "2":
                         Console.WriteLine();
-                        CinemaTicketsGroup cinemaTicketsGroup = new CinemaTicketsGroup();
+                        CinemaTicketsGroup.ShowPrice();
                         break;
                     case "3":
                         Console.WriteLine();
-                        StringRepeater stringRepeater = new StringRepeater();
+                        StringRepeater.PrintString();
                         break;
                     case "4":
                         Console.WriteLine();

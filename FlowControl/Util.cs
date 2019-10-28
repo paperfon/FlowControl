@@ -5,7 +5,7 @@ namespace FlowControl
     public static class Util
     {
         // Asking for a prompt and returning the input otherwise keep on asking
-        internal static string AskForSelection(string prompt)
+        internal static string AskForSelection(string prompt, int numberOfWords = 0)
         {
             bool doWhile = true;
             string input;
